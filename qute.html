@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New quote</title>
+</head>
+<body>
+    <button onclick="generateqoute()">Generate quote</button>
+
+    <P id="quote"></P>
+
+
+    <script>
+       
+
+        function generateqoute(){
+             //array of qoutes
+        var quotes=[
+            "I have a dream",
+            "Mambo in matatu",
+            "Akili mtu wangu",
+            "Connectition muhimu",
+            "Hakuna matata",
+            "What are u saying !!!!",
+            "Be so good they cant ignore you",
+            "Those who dont learn from history are doomed repeat it"
+         ];
+            
+            var quoteindex=Math.floor(Math.random()*quotes.length);
+            console.log(quoteindex);
+
+            document.getElementById("quote").innerHTML=quotes[quoteindex]
+
+
+           //getting color
+             var colours=[
+                "red",
+                "blue",
+                "aqua",
+                "brown",
+            ]
+             var colourindex =Math.floor(Math.random()*colours.length);
+            
+             document.body.style.backgroundColor= colours[colourindex];
+
+             
+        }
+    </script>
+</body>
+</html>
